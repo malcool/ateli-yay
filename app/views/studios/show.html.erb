@@ -1,0 +1,15 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @studio.photo %>);">
+  <div class="container">
+    <h1><%= @studio.name %></h1>
+    <p><%= @studio.category %></p>
+    <a class="btn btn-flat" href="<%= new_studio_booking_path(@studio) %>">Book this studio</a>
+  </div>
+</div>
+<div class="container">
+  <p>Located in: <%= @studio.city %></p>
+  <p>Price: $<%= '%.2f' % @studio.price_per_hour %>/hour</p>
+  <p>Description: <%= @studio.description %></p>
+  <a class="btn btn-flat" href="<%= studios_path %>">Go back to homepage / search page</a>
+</div>
+
+
